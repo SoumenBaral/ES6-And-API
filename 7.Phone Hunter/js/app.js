@@ -53,6 +53,12 @@ const processSearch =(dataLimit)=>{
 const getPhone=()=>{
     processSearch(10);
 }
+document.getElementById("search-field").addEventListener('keyup',function (e){
+    if (e.key === 'Enter') {
+        processSearch(10);
+        // console.log('Enter key pressed!');
+      }
+})
 document.getElementById("btn-show-all").addEventListener('click',function(){
  const clear =processSearch();
  clear.value ='';
