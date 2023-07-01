@@ -28,7 +28,7 @@ const displayPhone =(Phones,dataLimit)=>{
         NoPhone.classList.add('d-none');
     }
     Phones.forEach(phone=> {
-        console.log(phone);
+        // console.log(phone);
         const Div = document.createElement('div');
         Div.classList.add('col');
         Div.innerHTML=`
@@ -74,6 +74,26 @@ const toggleSpinner = isSpin =>{
         loader.classList.add('d-none');
     }
 }
-// LoadPhone('apple');
+
+const loadPhoneDetails = async(id)=>{
+    const url = ` https://openapi.programming-hero.com/api/phone/${id}`
+    const res = await fetch(url);
+    const data = await res.json();
+    displayPhoneDetails(data.data);
+}
+const displayPhoneDetails =phone=>{
+    const phoneName = document.getElementById("phoneDetailModalLabel");
+    phoneName.innerText = phone.name;
+    console.log(phone);
+    const phoneDetails = document.getElementById('phone-details');
+    console.log(phone.mainFeatures.sensors[0]);
+    phoneDetails.innerHTML = `
+        <p>Release Date: ${phone.releaseDate? phone.releaseDate : "NO releaseDate found"}</p>
+        <p>Storage: ${phone.mainFeatures ? phone.mainFeatures.storage : 'No Storage Information '}</p>
+        <p>Others: ${phone.others ? phone.others.Bluetooth : 'No Bluetooth Information'}</p>
+        <p>Sensor: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[0] : 'no sensor'}</p>
+    `
+}
+LoadPhone('apple');
 
                         
