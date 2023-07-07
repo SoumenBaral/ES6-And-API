@@ -42,4 +42,33 @@ const add =(first,second)=>{
     return result;
 }
 
-console.log(add(1,2));
+// console.log(add(1,2));
+
+// ৪. অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে
+//  map ইউজ করে। প্রত্যেকটা উপাদানকে ৭ দিয়ে ভাগ করে ভাগফল আরেকটা array হিসেবে 
+//  রাখবে। পুরা কাজটা এক লাইনে হবে। 
+
+const numbers = [10,20,30,40,50,60,70,80,90,100];
+const newNumber =  numbers.map(number=>parseFloat((number/7).toFixed(2)));
+// console.log(newNumber);
+
+// ৫. জাভাস্ক্রিপ্ট এ array এর map, forEach, filter, find 
+// কোনটা দিয়ে কি হয়। সেটার একটা সামারি লিখে ফেলো।
+
+//Map--Map koira den vai map koira den . Map akta loop jaikhane amra array ar upor map kori 
+//      and akta akta single element pai oigulare kisu koira retun dai ;
+
+// forEach: aito map ar moton aikhane sob hobe but return hobe na 
+// filter : filter use korte amago condition dite hobe jodi condition milla jay tile jai jai gular 
+//           shate condition milbe oi sob gula dibe 
+// find   : find o filter ar moton difference hoiloo find a sudu 1st a jaita milbe oi akta 
+//           debe ar kisu dibe na ;
+
+
+// ৬. সিম্পল একটা জাভাস্ক্রিপ্ট অবজেক্ট এর কোন একটা প্রোপার্টিকে ভেরিয়েবল 
+// হিসেবে ডিক্লেয়ার করার জন্য destructuring ইউজ করো। array এর 
+// destructuring করবে আর সেটা করার জন্য তুমি এরে এর সেকেন্ড পজিশন 
+// এর উপাদান কে destructuring করে 'balance' নামক একটা ভেরিয়েবল এ রাখবে।
+
+const{name, ...another}=Person;
+console.log(name,another);
