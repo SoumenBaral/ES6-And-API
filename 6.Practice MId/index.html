@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .comments{
+            border: 2px solid goldenrod;
+            padding: 10px;
+            margin: 10px;
+        }
+        #posts_main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .post{
+            border: 5px solid gray;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my practice website </h1>
+    </header>
+    <main>
+        <section id="posts_main">
+            <div id="Post_container">
+
+            </div>
+        </section>
+        <section>
+
+            <div id="add-Comments">
+
+            </div>
+        </section>
+        <button onclick="loadComments()">addData</button>
+    </main>
+    <script src="js/1.practice.js"></script>
+</body>
+</html>
