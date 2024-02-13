@@ -17,3 +17,4 @@ function add (first=0,second=0)
     console.log(newNumber);
 }
 add(233);
+
